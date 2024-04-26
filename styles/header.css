@@ -1,0 +1,140 @@
+.cabecalho {
+    background-color: var(--cor-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.lista-menu {
+    z-index: 3;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+    display: none;
+    width: 70vw;
+    position: absolute;
+    top: 100%;
+
+    background-color: var(--cor-branco);
+}
+
+.lista-menu__titulo, .lista-menu__item {
+    padding: 1em;
+    background-color: var(--cor-branco);
+}
+
+.lista-menu__titulo {
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: #002F52;
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.container__titulo, .opcoes, .container__imagem_text{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .cabecalho__menu-hamburguer  {
+        display: none;
+    }
+
+    .container__titulo, .container__titulo--negrito {
+        font-family: var(--font-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .container__titulo {
+        display: inline;
+        font-weight: 400;
+    }
+
+    .opcoes {
+        display: flex;
+        gap: 2.5em;
+    }
+
+    .opcoes__item, .opcoes__item__link {
+        color: var(--cor-preto);
+        text-transform: uppercase;
+    }
+
+    .opcoes__item__link {
+        text-decoration: none;
+    }
+
+    .container__imagem--transparente {
+        display: none;
+    }
+
+    .opcoes__botao {
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .lista-menu {
+        display: block;
+    }
+
+    .lista-menu {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__carrinho{
+        content: 'Minha Sacola';
+    }
+
+    .container > a {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: var(--cor-preto);
+        text-decoration: none;
+    }
+
+    .container__imagem_text {
+        display: block;
+        transform: translateX(-15px);
+    }
+}

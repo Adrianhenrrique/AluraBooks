@@ -1,5 +1,7 @@
 # AluraBooks
 
+![uma pagina de captura da tela inicial do aluraBooks](https://r2.easyimg.io/5rsm77ega/screenshot_7.png)
+
 ## Descrição do Projeto
 AluraBooks é uma loja online de livros focada em tecnologia. Este projeto foi desenvolvido utilizando HTML, CSS e a biblioteca de carrossel SwiperJs.
 
